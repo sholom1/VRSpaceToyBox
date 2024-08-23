@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 
-public class ShipController : MonoBehaviour
+public class ShipBrain : MonoBehaviour
 {
     [SerializeField]
     private Rigidbody rb;
