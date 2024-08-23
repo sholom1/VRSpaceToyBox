@@ -42,6 +42,19 @@ public class CustomGravity : MonoBehaviour
             }
         }
     }
+
+    public void SetGravityType(GravityType targetType)
+    {
+        if (gravityType == GravityType.Planet)
+        {
+            gravitySources.Remove(this);
+        }
+        if (targetType == GravityType.Planet)
+        {
+            gravitySources.Add(this);
+        }
+        gravityType = targetType;
+    }
 }
 
 public enum GravityType

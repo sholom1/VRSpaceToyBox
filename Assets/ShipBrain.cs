@@ -17,13 +17,18 @@ public class ShipBrain : MonoBehaviour
     {
         if (rb.velocity.sqrMagnitude > 1)
         {
-            foreach (ShipBaseComponent child in GetComponentsInChildren<ShipBaseComponent>())
+            ShipBaseComponent[] children = GetComponentsInChildren<ShipBaseComponent>();
+            foreach (ShipBaseComponent child in children)
             {
                 child.transform.SetParent(null, true);
                 Debug.Log(child.name);
                 Rigidbody childrb = child.gameObject.AddComponent<Rigidbody>();
                 childrb.velocity = rb.velocity;
                 childrb.useGravity = rb.useGravity;
+                childrb.mass = (1f/children.Length) * rb.mass;
+
+                CustomGravity customGravity = child.gameObject.AddComponent<CustomGravity>();
+                customGravity.SetGravityType(GravityType.Oribital);
             }
             Destroy(gameObject);
         }
