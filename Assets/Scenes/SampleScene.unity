@@ -12280,7 +12280,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 2.4e-44, z: 1.859e-41, w: 9.1835e-41}
+  m_BoundingSphereOverride: {x: 0, y: 3.81e-43, z: 0, w: 1.988477e+31}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -14328,7 +14328,7 @@ GameObject:
   - component: {fileID: 2102629068}
   - component: {fileID: 2102629067}
   - component: {fileID: 2102629070}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
