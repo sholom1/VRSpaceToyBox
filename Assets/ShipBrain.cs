@@ -22,7 +22,9 @@ public class ShipBrain : MonoBehaviour
             {
                 child.transform.SetParent(null, true);
                 Debug.Log(child.name);
-                Rigidbody childrb = child.gameObject.AddComponent<Rigidbody>();
+                Rigidbody childrb = child.GetComponent<Rigidbody>();
+                childrb = childrb == null ? child.gameObject.AddComponent<Rigidbody>() : childrb;
+                childrb.isKinematic = false;
                 childrb.velocity = rb.velocity;
                 childrb.useGravity = rb.useGravity;
                 childrb.mass = (1f/children.Length) * rb.mass;
