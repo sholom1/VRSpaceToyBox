@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipThrusterComponent : MonoBehaviour
+public class ShipThrusterComponent : ShipBaseComponent
 {
     public float thrustDuration;
     private float accelerationProgress;

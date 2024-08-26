@@ -22,10 +22,6 @@ public class ShipWindUpComponent : ShipBaseComponent
     {
         lineRenderer.SetPositions(new Vector3[] { transform.position, attachPoint.position });
         deviation = Vector3.Distance(transform.position, attachPoint.position);
-        if (deviation > 0.1f)
-        {
-            Debug.Log(deviation);
-        }
     }
     public void Release()
     {
